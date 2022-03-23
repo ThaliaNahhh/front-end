@@ -25,3 +25,24 @@ from 122 to 148
 	
 	//变形原点：
 	transform-orgin: 0 0;(默认值center)
+# less
+	//less：是一门css的预处理语言，css的增强版，代码更少，样式更强大。
+1. 应用场景：
+	同一颜色多处使用。
+	```js
+	html{
+		--color:#ff0;
+		--length:200px;
+	}
+	.box1{
+		width:var(--length);
+		height: var(--length);
+		color:var(--color);
+	}
+	.box2{
+		//calc()计算函数
+		width:calc(200px*2);
+		height: var(--length);
+		background-color:var(--color);
+	}
+	```
