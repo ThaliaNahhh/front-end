@@ -313,3 +313,55 @@ div{
 		网页中字体大小最小12px，不能再小，否则字体自动设置为12px。
 		
 		
+# 媒体查询简介
+
+	- 响应式布局
+	
+		网页可以根据不同的设备或者窗口大小呈现出不同的效果
+		使用响应式布局可以使一个网页适用于所有设备。
+		关键在于*媒体查询*， 可以为不同的设备或者窗口大小分别设置样式。
+		
+	- 媒体查询
+	
+		语法：@media 查询规则{}
+			媒体类型： all 所有设备
+					   print 打印设备
+					   screen 带屏幕设备
+					   speech 屏幕阅读器
+			在媒体类型前添加一个only表示只有，主要用于兼容老版本浏览器。
+					   
+			```js
+			@media speech, print, screen{
+				body{
+					background-color:#bfa;
+				}
+			}
+			@media only screen{
+				body{
+					background-color:#bfa;
+				}
+			}
+			```
+	- 媒体特性：
+		
+		width 视口宽度 heigh 视口高度
+		tips: ','表示或关系。
+			```js
+			@media (width: 500px){
+				body{
+					background-color:#bfa;
+				}
+			}
+			
+			@media (min-width: 500px) and (max-width:700px){
+				body{
+					background-color:#bfa;
+				}
+			}
+			```
+		样式切换的分界点（断点），网页样式在该点发生变化。
+		常用断点：
+			小于768 超小屏幕 max-width=768px
+			大于768 超小屏幕 min-width=768px
+			大于992 中型屏幕 max-width=992px
+			大于1200 大屏幕 max-width=1200px
