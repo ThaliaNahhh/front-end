@@ -170,3 +170,24 @@ from 122 to 148
   height: 100px;
 }
 ```
+4. 混合函数
+> 在混合函数中可以直接设置变量。
+> 调用时按顺序传参。
+> 可以指定默认值，不传值时使用默认值。
+> average(#000, #fff); darken(#bfa);
+```js
+.test(@w:200px , @h:200px, @bg-color:#bfa){
+	width: @w;	width: @w;
+	height:@h;
+	background-color: @bg-color;
+}
+div{
+	.test(200px, 100px, red);
+	.test(@bg-color:red, @w: 100px, @h: 100px);
+	.test(200px);//其余的使用默认值
+}
+
+```
+5. 补充
+> 通过 @import 来引入其他样式设置。
+> 在less中可以进行数值运算。
