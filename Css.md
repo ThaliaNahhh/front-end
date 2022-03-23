@@ -77,8 +77,9 @@ from 122 to 148
 		height: $width;
 		background-image: url("@{c}/1.png");
 	}
-	```
-	```js
+	
+	
+	
 	.box5 {
 	  width: 100px;
 	  color: #bfa;
