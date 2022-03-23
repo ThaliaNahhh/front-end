@@ -294,11 +294,11 @@ div{
 		所以编写时， 必须有一个比较合理的像素比。
 			1css 对应 2（或3）个物理像素
 	- 可以通过meta标签设置视口大小
-		```js<meta name="viewpoint" content="width=300px">```
+		```<meta name="viewpoint" content="width=300px">```
 		每款移动设备设计时都会有一个最佳像素比，可以直接将其设置为该值，该视口大小称为完美视口
 		device-width表示设备宽度（完美视口）。
 		
 		将网页的视口设置为完美视口（用于移动端）：
-		```js<meta name="viewport" content="width=device-width, initial-scale=1.0">```
+		```<meta name="viewport" content="width=device-width, initial-scale=1.0">```
 		
 		
