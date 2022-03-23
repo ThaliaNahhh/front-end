@@ -52,7 +52,6 @@ from 122 to 148
 		height: var(--length);
 		background-color:var(--color);
 	}
-	```
 2.变量
 
 > 变量：在变量中可以存储一个任意值，并在需要时任意修改。
@@ -77,8 +76,7 @@ from 122 to 148
 		height: $width;
 		background-image: url("@{c}/1.png");
 	}
-	
-	
+
 	
 	.box5 {
 	  width: 100px;
@@ -89,4 +87,4 @@ from 122 to 148
 	  height: 100px;
 	  background-image: url("box6/1.png");
 	}
-	```	
+
