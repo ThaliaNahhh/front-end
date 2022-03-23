@@ -26,7 +26,11 @@ from 122 to 148
 	//变形原点：
 	transform-orgin: 0 0;(默认值center)
 # less
-	//less：是一门css的预处理语言，css的增强版，代码更少，样式更强大。
+	>less：是一门css的预处理语言，css的增强版，代码更少，样式更强大。
+	less中添加了许多新特性。eg.对变量的支持，对mixin的支持。
+	less语法和css语法大体上一致，但有许多扩展。所以浏览器无法直接执行less代码。
+			需要插件转换而后由浏览器执行。
+	
 1. 应用场景：
 	同一颜色多处使用。
 	```js
@@ -46,3 +50,4 @@ from 122 to 148
 		background-color:var(--color);
 	}
 	```
+	
