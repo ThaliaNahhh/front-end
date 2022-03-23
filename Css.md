@@ -300,5 +300,16 @@ div{
 		
 		将网页的视口设置为完美视口（用于移动端）：
 		```<meta name="viewport" content="width=device-width, initial-scale=1.0">```
+	
+	- 视口 
+		不同设备完美视口大小不同，所以移动端开发时，不能再用px进行布局了。
+		vw(viewport width):视口宽度。
+						100vw = 1个视口宽度 
+						1vw = 1%视口宽度
+		设计图宽度：750px或1125px（经典）
+	
+	- rem
+		1 rem = 1 html字体大小
+		网页中字体大小最小12px，不能再小，否则字体自动设置为12px。
 		
 		
