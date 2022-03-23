@@ -61,7 +61,8 @@ from 122 to 148
 > 使用变量时，若直接使用则直接 @变量名 使用即可。
 > 作为类名或一部分值，需要 @{变量名} 的形式使用。
 > 新版语法： $属性名 可用于直接调用上一个属性的值。
-	```js
+
+```js
 	@a:100px;
 	@b:#bfa;
 	@c:box6;
@@ -76,8 +77,7 @@ from 122 to 148
 		height: $width;
 		background-image: url("@{c}/1.png");
 	}
-	```
-	```js
+
 	.box5 {
 	  width: 100px;
 	  color: #bfa;
@@ -87,7 +87,8 @@ from 122 to 148
 	  height: 100px;
 	  background-image: url("box6/1.png");
 	}
-	```
+```
+
 3. 父元素和扩展
 > & 表示外层父元素。
 
