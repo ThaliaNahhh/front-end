@@ -76,8 +76,8 @@ from 122 to 148
 		height: $width;
 		background-image: url("@{c}/1.png");
 	}
-
-	
+	```
+	```js
 	.box5 {
 	  width: 100px;
 	  color: #bfa;
@@ -87,4 +87,87 @@ from 122 to 148
 	  height: 100px;
 	  background-image: url("box6/1.png");
 	}
+	```
+3. 父元素和扩展
+> & 表示外层父元素。
 
+
+```js
+	>.box3{
+        /*子元素选择器*/
+        background-color: aqua;
+        &:hover{
+            color: orange;
+        }
+    }
+
+   
+    &:hover{
+        color: orange;
+    }
+
+	.box1 > .box3 {
+	  /*子元素选择器*/
+	  background-color: aqua;
+	}
+	.box1 > .box3:hover {
+	  color: orange;
+	}
+	.box1:hover {
+	  color: orange;
+	}
+```
+
+> :extend() 表示对当前选择器扩展指定选择器的样式。
+
+```js
+.p1{
+    width: 100px;
+    height: 100px;
+}
+
+.p2:extend(.p1){
+    color: red;
+}
+
+
+.p1,
+.p2 {
+  width: 100px;
+  height: 100px;
+}
+.p2 {
+  color: red;
+}
+```
+>     .p1() 直接对指定样式进行引用，相当于对p1样式进行复制。mixin混合。
+    但是复制，性能较差。
+```js
+.p3{
+    //.p1() 直接对指定样式进行引用，相当于对p1样式进行复制。mixin混合。
+    //复制，性能更差。
+    .p1();
+}
+
+.p3 {
+  width: 100px;
+  height: 100px;
+}
+```
+
+> 使用类选择器时可以在选择器后边添加一个括号，实现mixin，给别人使用。
+
+```js
+.p4(){
+    width: 100px;
+    height: 100px;
+}
+.p5{
+    .p4;
+}
+	
+.p5 {
+  width: 100px;
+  height: 100px;
+}
+```
