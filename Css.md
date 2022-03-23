@@ -217,10 +217,49 @@ div{
 				column-reverse
 		主轴：弹性元素的排列方向。
 		侧轴：与主轴垂直的轴。
+	flex-wrap: 设置弹性元素是否在弹性容器中换行
+		nowrap：默认值，元素不会自动换行
+		wrap: 元素沿辅轴方向自动换行。
+		wrap-reverse: 元素沿辅轴反方向自动换行。
+		
+	flex-flow: wrap 和 direction 的简写属性。
+	
+	justify-content：如何分配主轴上的空白区间。
+		flex-start:元素沿着主轴起边排列。
+		flex-end:元素沿着主轴终边排列。
+		center:居中。
+		space-around:空白分布到元素两侧。
+		space-evenly:空白分布到元素单侧。
+		
+	align-items:元素在辅轴上如何对齐以及元素之间的关系。
+		strech 默认 将元素的长度设置为相同的值。
+		flex-start 不拉伸 沿着辅轴起边对齐。
+		flex-end 不拉伸 沿着辅轴终边对齐。
+		center 居中。
+		baseline 基线对齐。
+	
+	align-content：辅轴空白区间的分布。
+		center
+		flex-start 
+		flex-end 
+		space-between
+		
+	align-self: 用来覆盖当前弹性元素上的空白区间分布。
 	
 	弹性元素的属性：
+	
 	flex-grow：指定弹性元素的伸展系数，默认0；
 		- 当父元素有多余空间时，子元素伸展方式。
 		- 父元素的剩余空间按照比例进行分配。
-	flew-shrink: 指定弹性元素的收缩系数。
-		- 当父元素空间不足以容纳所有子元素时，子元素的收缩方式。	
+	flew-shrink: 指定弹性元素的收缩系数, 计算方式较复杂，根据缩减系数和元素大小来计算。
+		- 当父元素空间不足以容纳所有子元素时，子元素的收缩方式。
+		
+	flex-basis: 元素在主轴上的基础长度（制定了宽度/高度）。
+		auto: 默认，参考元素自身宽高度。
+		
+	flex: 简写三样式 增长 缩减 基础。
+		initial “flex: 0 1 auto”.仅减
+		auto “flex: 1 1 auto”.
+		none “flex: 0 0 auto”.无弹性
+		
+	order:决定元素的排列顺序。
