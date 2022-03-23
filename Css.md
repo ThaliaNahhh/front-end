@@ -27,10 +27,13 @@ from 122 to 148
 	transform-orgin: 0 0;(默认值center)
 # less
 	> less：是一门css的预处理语言，css的增强版，代码更少，样式更强大。
-	less中添加了许多新特性。eg.对变量的支持，对mixin的支持。
-	less语法和css语法大体上一致，但有许多扩展。所以浏览器无法直接执行less代码。
+	> less中添加了许多新特性。eg.对变量的支持，对mixin的支持。
+	> less语法和css语法大体上一致，但有许多扩展。所以浏览器无法直接执行less代码。
 			需要插件转换而后由浏览器执行。
-	
+	> 	// less中的单行注释, 不会被解析到css中。
+		/*  css中的注释，
+			会被解析到css中。
+		*/
 1. 应用场景：
 	同一颜色多处使用。
 	```js
@@ -50,4 +53,39 @@ from 122 to 148
 		background-color:var(--color);
 	}
 	```
-	
+2.变量
+
+> 变量：在变量中可以存储一个任意值，并在需要时任意修改。
+	变量发生重名时，优先使用更近的。
+	可以在变量声明前使用但不建议。
+> 变量语法：@变量名 @{变量名} 
+> 使用变量时，若直接使用则直接 @变量名 使用即可。
+> 作为类名或一部分值，需要 @{变量名} 的形式使用。
+> 新版语法： $属性名 可用于直接调用上一个属性的值。
+	```js
+	@a:100px;
+	@b:#bfa;
+	@c:box6;
+
+	.box5{
+		width: @a;
+		color: @b;
+	}
+
+	.@{c}{
+		width: @a;
+		height: $width;
+		background-image: url("@{c}/1.png");
+	}
+	```
+	```js
+	.box5 {
+	  width: 100px;
+	  color: #bfa;
+	}
+	.box6 {
+	  width: 100px;
+	  height: 100px;
+	  background-image: url("box6/1.png");
+	}
+	```	
