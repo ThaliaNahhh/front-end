@@ -16,3 +16,12 @@ from 122 to 148
 	//设置3d变形效果
 	transform-style:preserve-3d;	
 
+# 缩放
+	//对元素进行缩放的函数（可以用来做hover放大）：
+		scaleX()
+		scaleY()
+		scale()
+	//tips:scaleZ()比较少用，因为本质上是拉长Z轴。无立体结构看不出来。
+	
+	//变形原点：
+	transform-orgin: 0 0;(默认值center)
